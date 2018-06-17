@@ -39,14 +39,14 @@ TEXT_4 = [
 
     'Illegal post ID: Input contains illegal character(s).',
     '你的輸入包含非法字元，我覺得不行',
-    ''
+    'ID de publicación ilegal: La entrada contiene carácter(es) ilegal(es)'
 ]
 
 TEXT_5 = [
 
-    'Illegal post id: A post ID should start with 314 or 271.',
+    'Illegal post ID: A post ID should start with 314 or 271.',
     '編號都是以314或271開頭的呦~，我覺得不行......',
-
+    'ID de publición ilegal: Una ID de publicación debe comenzar con 314 o 271.'
 ]
 
 TEXT_6 = [
@@ -162,7 +162,7 @@ CHITCHAT = [
      '^_^'],
     ['Do. Or do not. There is no try.    Master Yoda',
      '要嘛就做，要嘛不做，別總說:我試試看   尤達大師',
-     'Hazlo, o no lo hagas, pero no lo intentes.  Yoda'],
+     'Hazlo, o no lo hagas, pero no lo intentes. Maestro Yoda'],
     ['Apriciate to slugs, praise for slugs',
      '感恩蛞蝓，讚歎蛞蝓',
      'Agredece a las babosas, elogia a las babosas.'],
@@ -232,24 +232,24 @@ NOTE:*
 Información de comandos
 
 /find <target>
-Buscar una cadena de caracteres dentro los posts
+Buscar una cadena de caracteres dentro las publicaciones
 
 /view <post>
-Ver un post
+Ver una publicación
 
 /findh <target>
 Buscar en HateNEHS
 
 /viewh <post>
-Ver posts de HateNEHS
+Ver publicaciones de HateNEHS
 
 /lang <language>
-Cambiar el idoma
+Cambiar de idoma
 
 /submit <text>
 Enviar un texto
 
 /slug
-Babosas majas
+Babosas majísimas
 '''
 ]
