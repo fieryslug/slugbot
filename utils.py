@@ -6,6 +6,7 @@ from slugbot import botutils
 import facebook
 import random
 
+
 class PagePost:
     def __init__(self, post:dict):
         self.time = ''
@@ -171,6 +172,15 @@ class ChatHandler:
         #TODO implement natural language processing
         self.the_bot.smart_send_msg(random.choice(user, self.list_chat[user.lang]))
 
+def get_slug(site):
+    if site in slug_map:
+        return slug_map[site]
+    else:
+        s = ''
+        for entry in slug_map:
+            s += entry + '\n'
+        return s
+
 
 def localize(user: botutils.User):
     lang = 0
@@ -194,7 +204,36 @@ def page_post(ID, access_token, msg):
                                                                                                    access_token))
     return r.content
 
+def find_in_saved(filename, target):
+    saved = []
+    with open('source/parsed/' + filename, 'r') as f:
+        saved = json.load(f)
+
+    for sv in saved:
+        pass
+
+
 
 aqua_slug = CrawlingSlug(configs.PAGE_ID[0], configs.ACCESS_TOKEN)
 ignis_slug = CrawlingSlug(configs.PAGE_ID[1], configs.ACCESS_TOKEN)
+flamma_slug = CrawlingSlug(configs.PAGE_IDS['hn'], configs.ACCESS_TOKEN)
+terra_slug = CrawlingSlug(configs.PAGE_IDS['c8'], configs.ACCESS_TOKEN)
+aer_slug = CrawlingSlug(configs.PAGE_IDS['h8'], configs.ACCESS_TOKEN)
+
+tenebrae_slug = CrawlingSlug(configs.PAGE_IDS['hhchs'], configs.ACCESS_TOKEN)
+lux_slug = CrawlingSlug(configs.PAGE_IDS['chchs'], configs.ACCESS_TOKEN)
+
+test_slug = CrawlingSlug('1181443615334961', configs.ACCESS_TOKEN)
+
+
+slug_map = {
+
+    'cn': aqua_slug,
+    'hn': flamma_slug,
+    'c8': terra_slug,
+    'h8': aer_slug,
+    'hhchs': tenebrae_slug,
+    'chchs': lux_slug,
+    'test30182384': test_slug
+}
 
